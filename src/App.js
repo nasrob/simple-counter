@@ -1,12 +1,12 @@
-
+import { useState } from 'react';
 import './App.css';
 import Button from './components/Button'
 
 function App() {
-  let count = 0
+  const [count, setCount] = useState(0)
 
   const incrementCount = increment => {
-
+    setCount(count + increment)
   }
 
   return (
