@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Button from './components/Button'
 
 function App() {
+  let count = 0
+
+  const incrementCount = increment => {
+
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Button increment={ 1 } onClickFunction={ incrementCount } />
+      <Button increment={ 10 } onClickFunction={ incrementCount } />
+      <Button increment={ 100 } onClickFunction={ incrementCount } />
+      <Button increment={ 1000 } onClickFunction={ incrementCount } />
+      <span>{ count }</span>
     </div>
   );
 }
